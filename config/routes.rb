@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
   root 'frontpage#index'
-  
+
+  get "/users/new" => "users#new"
+  get "/users/" => "users#index"
+  get "/users/login" => "users#login"
+  patch "users/:id" => "users#update"
+  get "/users/:id/edit" => "users#edit"
+  get "/users/:id" => "users#show"
+  post "/users" => "users#create"
+  get "/microposts" => "microposts#index"
+  get "/microposts/users/:id" => "microposts#show"
+  post "/microposts" => "microposts#create"
+  delete "/microposts/:id" => "microposts#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

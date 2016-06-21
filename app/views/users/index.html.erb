@@ -1,0 +1,10 @@
+<h1>Current Twatters</h1>
+
+<h3>Name &emsp;:&emsp; Email</h3>
+
+<% @users.each do |u| %>
+  <p><%= u.name %>&emsp;:&emsp;<%=  u.email %>&emsp;<%= link_to "Show", "/users/#{u.id}" %>&emsp;<%= link_to "Edit", "/users/#{u.id}/edit" %></p>
+<% end %>
+<div>
+</div>
+<%= link_to "New User", "/users/new" %>

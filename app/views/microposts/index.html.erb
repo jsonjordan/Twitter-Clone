@@ -1,0 +1,18 @@
+<h1>Here is the master feed!</h1>
+<h3>Find new friends, learn something you never thought you would!</h3>
+<p>To find all the twats by a user, enter their name below:<p>
+  <%= form_tag "/microposts", method: :get do %>
+    <input type="text" placeholder="Name" name="name">
+    <div>
+    </div>
+    <button>Search!</button>
+  <% end %>
+<ul>
+  <% @posts.each do |p| %>
+  <li>
+    <p>Updated At: <%= p.updated_at.in_time_zone('Eastern Time (US & Canada)')%><p>
+    <%= p.content %>
+    <p>Written By: <%= p.user.name %>
+  </li>
+  <% end %>
+</ul>

@@ -1,0 +1,16 @@
+<h1>Welcome!</h1>
+<h3>Name: <%= @user.name %></h3>
+ <h3>Email: <%= @user.email %></h3>
+ <div>
+ </div>
+<h3>Options:</h3>
+<ul>
+  <li>
+    <%= link_to "See all the posts", "/microposts" %>
+  </li>
+  <li>
+    <%= link_to "See YOUR posts", "/microposts/users/#{@user.id}" %>
+  </li>
+  <li>
+  <%= link_to "Update your account info", "/users/#{@user.id}/edit" %>
+  </li>

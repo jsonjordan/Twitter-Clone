@@ -1,0 +1,11 @@
+<h1> Editing User </h1>
+
+<%= form_tag "/users/#{@user.id}", method: :patch do %>
+  <input type="text" placeholder="New Email" name="email">
+  <div>
+  </div>
+  <input type="text" placeholder="New Username" name="username">
+  <div>
+  </div>
+  <button>Update!</button>
+<% end %>

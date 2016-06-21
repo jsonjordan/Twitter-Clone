@@ -1,9 +1,13 @@
-<h1>Welcome, <%= @username %>!</h1>
+<h1>Welcome to Twater!</h1>
 
 <h3>Would you like to look a the master feed, sign up, or Log-In?</h3>
-<%= button_to "Master Feed",'/microposts/all' %>
-<%= button_to "Sign Up", '/users/new' %>
-<%= form_tag '/users' do %>
+<%= link_to "Master Feed",'/microposts'%>
+<div>
+</div>
+<%= link_to "Sign Up", '/users/new'%>
+<div>
+</div>
+<%= form_tag "/users/login", method: :get do %>
   <input type="text" placeholder="Email" name="email">
   <button>Log-In</button>
 <% end %>
