@@ -1,5 +1,6 @@
 <h1>Here is the master feed!</h1>
 <h3>Find new friends, learn something you never thought you would!</h3>
+<%= link_to "Make a Post!", '/microposts/new' %>
 <p>To find all the twats by a user, enter their name below:<p>
   <%= form_tag "/microposts", method: :get do %>
     <input type="text" placeholder="Name" name="name">

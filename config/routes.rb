@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/users/:id" => "users#show"
   post "/users" => "users#create"
   get "/microposts" => "microposts#index"
+  get '/microposts/new'=> "microposts#new"
   get "/microposts/users/:id" => "microposts#show"
   post "/microposts" => "microposts#create"
   delete "/microposts/:id" => "microposts#destroy"

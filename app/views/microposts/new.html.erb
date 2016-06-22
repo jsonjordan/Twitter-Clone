@@ -1,0 +1,6 @@
+<h2>Make a new post.</h2>
+<%= form_tag microposts_path do %>
+  <input type="text" placeholder="New Post" name="content"></input>
+  <input name="name" type="username" placeholder="Username"></input>
+  <button>Post!</button>
+<% end %>

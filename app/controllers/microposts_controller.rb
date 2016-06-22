@@ -1,8 +1,9 @@
 class MicropostsController < ApplicationController
 
   def create
-    Micropost.create!(content: params[:content], user_id: params[:user_id].to_i)
-    redirect_to "/microposts/users/#{params[:user_id]}"
+    user = User.find_by(name: params[:name])
+    Micropost.create!(content: params[:content], user_id: user.id)
+    redirect_to "/microposts/users/#{user.id}"
   end
 
   def index
@@ -15,6 +16,10 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+
+  end
+
+  def new
 
   end
 
